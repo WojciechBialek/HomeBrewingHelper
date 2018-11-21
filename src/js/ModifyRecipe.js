@@ -27,9 +27,7 @@ class Beers extends React.Component {
                 console.log(err);
             });
     }
-    handleChooseBeer=(event)=>{
-        console.log("asdsa")
-    }
+
     render() {
         if (!this.state.data){
             return <div>Ładuję...</div>;
@@ -38,7 +36,7 @@ class Beers extends React.Component {
                 <div>
                     {this.state.data.map(beer => {
                         return (
-                            <Button waves="yellow" key={beer.id} onClick={this.handleChooseBeer}>{beer.name}</Button>
+                            <Button waves="yellow" key={beer.id}>{beer.name}</Button>
                         );
                     })}
                 </div>

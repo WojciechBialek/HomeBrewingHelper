@@ -5,6 +5,7 @@
   "dependencies": {
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-native-elements": "^1.0.0-beta7",
     "react-scripts": "2.1.1"
   },
   "scripts": {
@@ -23,6 +24,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "node-sass": "^4.10.0"
+    "node-sass": "^4.10.0",
+    "react-native-vector-icons@": "^4.2.0",
+    "react-materialize": "^2.5.0"
   }
 }
