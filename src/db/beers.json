@@ -23,32 +23,27 @@
   "method": {
     "mash_temp": [
       {
-        "temp1": {
-          "value": 63.5,
-          "unit": "celsius"
-        },
+        "temp": "faza dekstrynujaca",
+        "value": 63.5,
+        "unit": "celsius",
         "duration": 30
       },
       {
-        "temp2": {
-          "value": 72,
-          "unit": "celsius"
-        },
+        "temp": "faza jakas",
+        "value": 72,
+        "unit": "celsius",
         "duration": 30
       },
       {
-        "temp3": {
-          "value": 77,
-          "unit": "celsius"
-        },
+        "temp": "faza 3jakas",
+        "value": 77,
+        "unit": "celsius",
         "duration": 5
       }
     ],
     "fermentation": {
-      "temp": {
-        "value": 19.0,
-        "unit": "celsius"
-      }
+      "value": 19.0,
+      "unit": "celsius"
     },
     "twist": null
   },
@@ -133,7 +128,7 @@
 },
     {
       "id": 2,
-      "name": "Red IPA ",
+      "name": "Grodziskie ",
       "tagline": "Red Ipa",
       "description": "Red IPA to specjalna odmiana amerykańskiej IPA, w smaku wyraźnie słodowe, ciasteczkowe i karmelowe, finisz wytrawny, goryczka mocna i wyraźna, bogaty aromat amerykańskich chmieli.",
       "image_url": "../images/redIpa.jpg",

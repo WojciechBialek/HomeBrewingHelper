@@ -1,17 +1,44 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import Beers from "./js/searingbeer";
+import SearchBeer from "./js/SearchBeer";
 import StartPage from "./js/startpage";
+import NotFound from "./js/NotFound";
+import ModifyRecipe from "./js/ModifyRecipe";
+import Header from "./js/Header";
+import Footer from "./js/Footer";
 
+import {
+    HashRouter,
+    Route,
+    Link,
+    Switch,
+    NavLink,
+} from 'react-router-dom';
+
+const MainTemplate=({children})=>(
+    <div>
+        <Header/>
+
+        {children}
+
+        <Footer/>
+    </div>
+)
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-          <StartPage/>
-        <Beers/>
-
-      </div>
+        <HashRouter>
+            <div>
+                <MainTemplate>
+                  <Switch>
+                      <Route exact path="/" component={StartPage} />
+                      <Route path={"/searchbeer"} component={SearchBeer}/>
+                      <Route path='/beers/:beerId' component={ModifyRecipe} />
+                      <Route component={NotFound} />
+                  </Switch>
+                </MainTemplate>
+            </div>
+         </HashRouter>
     );
   }
 }

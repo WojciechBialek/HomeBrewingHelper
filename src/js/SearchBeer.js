@@ -1,6 +1,13 @@
 import React from 'react';
-import {Button, Icon} from 'react-materialize'
+// import {Button, Icon} from 'react-materialize';
 
+import {
+    HashRouter,
+    Route,
+    Link,
+    Switch,
+    NavLink,
+} from 'react-router-dom';
 
 class Beers extends React.Component {
     constructor(props) {
@@ -27,9 +34,7 @@ class Beers extends React.Component {
                 console.log(err);
             });
     }
-    handleChooseBeer=(event)=>{
-        console.log("asdsa")
-    }
+
     render() {
         if (!this.state.data){
             return <div>Ładuję...</div>;
@@ -38,7 +43,9 @@ class Beers extends React.Component {
                 <div>
                     {this.state.data.map(beer => {
                         return (
-                            <Button waves="yellow" key={beer.id} onClick={this.handleChooseBeer}>{beer.name}</Button>
+                            <div>
+                                <Link key={beer.id} to={`/beers/${beer.id}`}>{beer.name}</Link>
+                            </div>
                         );
                     })}
                 </div>
