@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {Fragment, Component} from 'react';
+
 import {Button, Icon} from 'react-materialize'
 import {Link} from "react-router-dom";
 
 
-class ModifyRecipe extends React.Component{
+class ModifyRecipe extends Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -65,12 +66,73 @@ class ModifyRecipe extends React.Component{
                     </tr>
                     {this.state.beer.method.mash_temp.map(mash => {
                         return (
-                            <tr key={mash.temp}>
-                                <th>Faza:</th>
-                                <th>{mash.temp}</th>
-                            </tr>
+                            <Fragment key={mash.temp}>
+                                <tr>
+                                    <th>Faza:</th>
+                                    <th>{mash.temp}</th>
+                                </tr>
+                                <tr>
+                                    <td>Temperatura</td>
+                                    <td>{mash.value}</td>
+                                </tr>
+                                <tr>
+                                    <td>Czas utrzymywania</td>
+                                    <td>{mash.duration}</td>
+                                </tr>
+                            </Fragment>
                         );
                     })}
+                    <tr>
+                        <td>Temperatura fermentacji</td>
+                        <td>{this.state.beer.method.fermentation.value} </td>
+                    </tr>
+                    {this.state.beer.ingredients.water.map(water => {
+                        return (
+                            <Fragment key={water.name}>
+                                <tr>
+                                    <th>Woda:</th>
+                                    <th>{water.name}</th>
+                                </tr>
+                                <tr>
+                                    <td>Litry:</td>
+                                    <td>{water.amount}</td>
+                                </tr>
+                                <tr>
+                                    <td>Temperatura</td>
+                                    <td>{water.temp}</td>
+                                </tr>
+                            </Fragment>
+                        );
+                    })}
+                    {this.state.beer.ingredients.malt.map(malt => {
+                        return (
+                            <Fragment key={malt.name}>
+                                <tr>
+                                    <th>Słód:</th>
+                                    <th>{malt.name}</th>
+                                </tr>
+                                <tr>
+                                    <td>Ilość</td>
+                                    <td>{malt.amount.value} {malt.amount.unit}</td>
+                                </tr>
+                            </Fragment>
+                        );
+                    })}
+                    {this.state.beer.ingredients.hops.map(hops => {
+                        return (
+                            <Fragment key={hops.name}>
+                                {/*<tr>*/}
+                                    {/*<th>Słód:</th>*/}
+                                    {/*<th>{malt.name}</th>*/}
+                                {/*</tr>*/}
+                                {/*<tr>*/}
+                                    {/*<td>Ilość</td>*/}
+                                    {/*<td>{malt.amount.value} {malt.amount.unit}</td>*/}
+                                {/*</tr>*/}
+                            </Fragment>
+                        );
+                    })}
+
                     </tbody>
                 </table>
             </div>
