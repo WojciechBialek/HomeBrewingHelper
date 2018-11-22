@@ -1,11 +1,12 @@
 import React from 'react';
+import image from "../images/NotFound.jpg"
 
 class NotFound extends React.Component{
     render(){
         return(
-            <div>
+            <div >
                 <h1>Przecholowałeś</h1>
-                <img src="./images/NotFound.jpg"/>
+                <img src={image}/>
             </div>
         )
     }

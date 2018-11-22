@@ -1,11 +1,7 @@
 import React from 'react';
 import {Button, Icon} from 'react-materialize'
 import {
-    HashRouter,
-    Route,
     Link,
-    Switch,
-    NavLink,
 } from 'react-router-dom';
 
 class StartPage extends React.Component{

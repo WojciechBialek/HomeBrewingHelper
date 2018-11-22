@@ -5,6 +5,7 @@ import NotFound from "./js/NotFound";
 import ModifyRecipe from "./js/ModifyRecipe";
 import Header from "./js/Header";
 import Footer from "./js/Footer";
+import HomeBrewing from "./js/HomeBrewing";
 
 import {
     HashRouter,
@@ -34,6 +35,7 @@ class App extends Component {
                       <Route exact path="/" component={StartPage} />
                       <Route path={"/searchbeer"} component={SearchBeer}/>
                       <Route path='/beers/:beerId' component={ModifyRecipe} />
+                      <Route path="/homebrewing" component={HomeBrewing}/>
                       <Route component={NotFound} />
                   </Switch>
                 </MainTemplate>

@@ -1,5 +1,5 @@
 import React, {Fragment, Component} from 'react';
-
+import HandleModifyRecipe from "./HandleModifyRecipe";
 import {Button, Icon} from 'react-materialize'
 import {Link} from "react-router-dom";
 
@@ -30,13 +30,38 @@ class ModifyRecipe extends Component{
 
     }
 
+    updateBeer = (name, value)=> {
+        const copyState = this.state.beer;
+        copyState[name] = value;
+        this.setState({
+            beer: copyState
+        }, ()=> {
+            fetch(this.beerURL, {
+                method: 'PUT',
+                body: JSON.stringify( this.state.beer ),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then( resp => resp.json())
+                .then( data => {
+                    console.log( data );
+                });
+        });
+        console.log("nowe");
+        console.log(copyState);
+        console.log(this.state.beer);
+
+
+    }
     render(){
         console.log(this.state.beer);
         return this.state.beer && (
             <div>
                 <h1>{this.state.beer.name}</h1>
                 <h2>{this.state.beer.description}</h2>
-                <table>
+                <table className="centered striped">
                     <thead>
                     <tr>
                         <th>Nazwa</th>
@@ -46,45 +71,45 @@ class ModifyRecipe extends Component{
                     <tbody>
                     <tr>
                         <td>BLG początkowe</td>
-                        <td>{this.state.beer.blg_start}</td>
+                        <td><HandleModifyRecipe clickMethod={this.updateBeer} name={"blg_start"} value={this.state.beer.blg_start} /></td>
                     </tr>
                     <tr>
                         <td>BLG końcowe</td>
-                        <td>{this.state.beer.blg_end}</td>
+                        <td><HandleModifyRecipe value={this.state.beer.blg_end}/></td>
                     </tr>
                     <tr>
                         <td>Kolor w skali "ebc"</td>
-                        <td>{this.state.beer.ebc}</td>
+                        <td><HandleModifyRecipe value={this.state.beer.ebc}/></td>
                     </tr>
                     <tr>
                         <td>Szacowana wielkość warki</td>
-                        <td>{this.state.beer.volume.value} {this.state.beer.volume.unit}</td>
+                        <td><HandleModifyRecipe value={this.state.beer.volume.value}/> <HandleModifyRecipe value={this.state.beer.volume.unit}/></td>
                     </tr>
                     <tr>
                         <td>Minimalna objętość garnka</td>
-                        <td>{this.state.beer.boil_volume.value} {this.state.beer.boil_volume.unit}</td>
+                        <td><HandleModifyRecipe value={this.state.beer.boil_volume.value}/> <HandleModifyRecipe value={this.state.beer.boil_volume.unit}/></td>
                     </tr>
                     {this.state.beer.method.mash_temp.map(mash => {
                         return (
-                            <Fragment key={mash.temp}>
+                            <Fragment key={mash.id}>
                                 <tr>
                                     <th>Faza:</th>
-                                    <th>{mash.temp}</th>
+                                    <th><HandleModifyRecipe value={mash.temp}/></th>
                                 </tr>
                                 <tr>
                                     <td>Temperatura</td>
-                                    <td>{mash.value}</td>
+                                    <td><HandleModifyRecipe value={mash.value}/></td>
                                 </tr>
                                 <tr>
                                     <td>Czas utrzymywania</td>
-                                    <td>{mash.duration}</td>
+                                    <td><HandleModifyRecipe value={mash.duration}/></td>
                                 </tr>
                             </Fragment>
                         );
                     })}
                     <tr>
                         <td>Temperatura fermentacji</td>
-                        <td>{this.state.beer.method.fermentation.value} </td>
+                        <td><HandleModifyRecipe value={this.state.beer.method.fermentation.value}/> </td>
                     </tr>
                     {this.state.beer.ingredients.water.map(water => {
                         return (
@@ -109,32 +134,46 @@ class ModifyRecipe extends Component{
                             <Fragment key={malt.name}>
                                 <tr>
                                     <th>Słód:</th>
-                                    <th>{malt.name}</th>
+                                    <th><HandleModifyRecipe value={malt.name}/></th>
                                 </tr>
                                 <tr>
                                     <td>Ilość</td>
-                                    <td>{malt.amount.value} {malt.amount.unit}</td>
+                                    <td><HandleModifyRecipe value={malt.amount.value}/> {malt.amount.unit}</td>
                                 </tr>
                             </Fragment>
                         );
                     })}
-                    {this.state.beer.ingredients.hops.map(hops => {
+                    {this.state.beer.ingredients.hops.map(hop => {
                         return (
-                            <Fragment key={hops.name}>
-                                {/*<tr>*/}
-                                    {/*<th>Słód:</th>*/}
-                                    {/*<th>{malt.name}</th>*/}
-                                {/*</tr>*/}
-                                {/*<tr>*/}
-                                    {/*<td>Ilość</td>*/}
-                                    {/*<td>{malt.amount.value} {malt.amount.unit}</td>*/}
-                                {/*</tr>*/}
+                            <Fragment key={hop.id}>
+                                <tr>
+                                    <th>Chmiel:</th>
+                                    <th><HandleModifyRecipe value={hop.name}/></th>
+                                </tr>
+                                <tr>
+                                    <td>Ilość</td>
+                                    <td><HandleModifyRecipe value={hop.amount.value}/> gram</td>
+                                </tr>
+                                <tr>
+                                    <td>Dodawanie:</td>
+                                    <td><HandleModifyRecipe value={hop.add}/></td>
+                                </tr>
                             </Fragment>
                         );
                     })}
+                    <tr>
+                        <th>Drożdże:</th>
+                        <th><HandleModifyRecipe value={this.state.beer.ingredients.yeast.form}/> </th>
+                    </tr>
+                    <tr>
+                        <td>Typ:</td>
+                        <td><HandleModifyRecipe value={this.state.beer.ingredients.yeast.type}/></td>
+                    </tr>
+                    <tr><td>Stworzone przez</td><td>{this.state.beer.contributed_by}</td></tr>
 
                     </tbody>
                 </table>
+                <Link  to={`/homebrewing`}>Zatwierdź!</Link>
             </div>
 
 

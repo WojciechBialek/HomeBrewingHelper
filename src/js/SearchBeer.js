@@ -43,8 +43,8 @@ class Beers extends React.Component {
                 <div>
                     {this.state.data.map(beer => {
                         return (
-                            <div>
-                                <Link key={beer.id} to={`/beers/${beer.id}`}>{beer.name}</Link>
+                            <div key={beer.id}>
+                                <Link  to={`/beers/${beer.id}`}>{beer.name}</Link>
                             </div>
                         );
                     })}

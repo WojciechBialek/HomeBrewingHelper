@@ -1,142 +1,169 @@
 {
-  "beers":[
-{
-  "id": 1,
-  "name": "Red IPA ",
-  "tagline": "Red Ipa",
-  "description": "Red IPA to specjalna odmiana amerykańskiej IPA, w smaku wyraźnie słodowe, ciasteczkowe i karmelowe, finisz wytrawny, goryczka mocna i wyraźna, bogaty aromat amerykańskich chmieli.",
-  "image_url": "../images/redIpa.jpg",
-  "abv": 6.0,
-  "ibu": 47.0,
-  "blg_start": 14,
-  "blg_end": 3,
-  "ebc": 25.0,
-  "srm": 8.5,
-  "volume": {
-    "value": 20,
-    "unit": "liters"
-  },
-  "boil_volume": {
-    "value": 27,
-    "unit": "liters"
-  },
-  "method": {
-    "mash_temp": [
-      {
-        "temp": "faza dekstrynujaca",
-        "value": 63.5,
-        "unit": "celsius",
-        "duration": 30
+  "beers": [
+    {
+      "id": 1,
+      "name": "Red IPA ",
+      "tagline": "Red Ipa",
+      "description": "Red IPA to specjalna odmiana amerykańskiej IPA, w smaku wyraźnie słodowe, ciasteczkowe i karmelowe, finisz wytrawny, goryczka mocna i wyraźna, bogaty aromat amerykańskich chmieli.",
+      "image_url": "../images/redIpa.jpg",
+      "abv": 6,
+      "ibu": 47,
+      "blg_start": "14",
+      "blg_end": 3,
+      "ebc": 25,
+      "srm": 8.5,
+      "volume": {
+        "value": 20,
+        "unit": "liters"
       },
-      {
-        "temp": "faza jakas",
-        "value": 72,
-        "unit": "celsius",
-        "duration": 30
+      "boil_volume": {
+        "value": 27,
+        "unit": "liters"
       },
-      {
-        "temp": "faza 3jakas",
-        "value": 77,
-        "unit": "celsius",
-        "duration": 5
-      }
-    ],
-    "fermentation": {
-      "value": 19.0,
-      "unit": "celsius"
+      "method": {
+        "mash_temp": [
+          {
+            "temp": "faza dekstrynujaca",
+            "value": 63.5,
+            "unit": "celsius",
+            "duration": 30
+          },
+          {
+            "temp": "faza jakas",
+            "value": 72,
+            "unit": "celsius",
+            "duration": 30
+          },
+          {
+            "temp": "faza 3jakas",
+            "value": 77,
+            "unit": "celsius",
+            "duration": 5
+          }
+        ],
+        "fermentation": {
+          "value": 19,
+          "unit": "celsius"
+        },
+        "twist": null
+      },
+      "ingredients": {
+        "water": [
+          {
+            "name": "start",
+            "amount": 16,
+            "temp": 70
+          },
+          {
+            "name": "filtration",
+            "amount": "14",
+            "temp": "77.5"
+          }
+        ],
+        "malt": [
+          {
+            "name": "Słód Pilznenski Viking Malt",
+            "amount": {
+              "value": 4,
+              "unit": "kilograms"
+            }
+          },
+          {
+            "name": "Słód monachijski Viking Malt II",
+            "amount": {
+              "value": 0.8,
+              "unit": "kilograms"
+            }
+          },
+          {
+            "name": "Słód karmelowy jasny Litovel",
+            "amount": {
+              "value": 0.4,
+              "unit": "kilograms"
+            }
+          },
+          {
+            "name": "Słód karmelowy ciemny Ireks",
+            "amount": {
+              "value": 0.1,
+              "unit": "kilograms"
+            }
+          }
+        ],
+        "hops": [
+          {
+            "id": 1,
+            "name": "Zeus/Colombus",
+            "amount": {
+              "value": 10,
+              "unit": "grams"
+            },
+            "add": "gotowanie",
+            "attribute": "bitter",
+            "time": 10
+          },
+          {
+            "id": 2,
+            "name": "Simcoe",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "gotowanie",
+            "attribute": "bitter",
+            "time": 30,
+            "warning": "nie całość!"
+          },
+          {
+            "id": 3,
+            "name": "Citra",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "gotowanie",
+            "attribute": "bitter",
+            "warning": "nie całość!"
+          },
+          {
+            "id": 4,
+            "name": "Simcoe",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "chmielenie na zimno",
+            "attribute": "bitter"
+          },
+          {
+            "id": 5,
+            "name": "Citra",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "chmielenie na zimno",
+            "attribute": "bitter"
+          }
+        ],
+        "yeast": {
+          "form": "drożdże suche",
+          "type": "US-05"
+        }
+      },
+      "contributed_by": "Brewing helper"
     },
-    "twist": null
-  },
-  "ingredients": {
-    "water": [
-      {
-        "name": "start",
-        "amount": 16,
-        "temp": 70
-      },
-      {
-        "name": "filtration",
-        "amount": "14",
-        "temp": "77.5"
-      }
-    ],
-    "malt": [
-      {
-        "name": "Słód Pilznenski Viking Malt",
-        "amount": {
-          "value": 4.0,
-          "unit": "kilograms"
-        }
-      },
-      {
-        "name": "Słód monachijski Viking Malt II",
-        "amount": {
-          "value": 0.8,
-          "unit": "kilograms"
-        }
-      },
-      {
-        "name": "Słód karmelowy jasny Litovel",
-        "amount": {
-          "value": 0.4,
-          "unit": "kilograms"
-        }
-      },
-      {
-        "name": "Słód karmelowy ciemny Ireks",
-        "amount": {
-          "value": 0.1,
-          "unit": "kilograms"
-        }
-      }
-    ],
-    "hops": [
-      {
-        "name": "Zeus/Colombus",
-        "amount": {
-          "value": 10.0,
-          "unit": "grams"
-        },
-        "add": "start",
-        "attribute": "bitter"
-      },
-      {
-        "name": "Simcoe",
-        "amount": {
-          "value": 50,
-          "unit": "grams"
-        },
-        "add": "start",
-        "attribute": "bitter"
-      },
-      {
-        "name": "Citra",
-        "amount": {
-          "value": 50,
-          "unit": "grams"
-        },
-        "add": "start",
-        "attribute": "bitter"
-      }
-    ],
-    "yeast": {
-      "form": "drożdże suche",
-      "type": "US-05"
-    }
-  },
-  "contributed_by": "Brewing helper"
-},
     {
       "id": 2,
       "name": "Grodziskie ",
       "tagline": "Red Ipa",
       "description": "Red IPA to specjalna odmiana amerykańskiej IPA, w smaku wyraźnie słodowe, ciasteczkowe i karmelowe, finisz wytrawny, goryczka mocna i wyraźna, bogaty aromat amerykańskich chmieli.",
       "image_url": "../images/redIpa.jpg",
-      "abv": 6.0,
-      "ibu": 47.0,
+      "abv": 6,
+      "ibu": 47,
       "blg_start": 14,
       "blg_end": 3,
-      "ebc": 25.0,
+      "ebc": 25,
       "srm": 8.5,
       "volume": {
         "value": 20,
@@ -172,7 +199,7 @@
         ],
         "fermentation": {
           "temp": {
-            "value": 19.0,
+            "value": 19,
             "unit": "celsius"
           }
         },
@@ -195,7 +222,7 @@
           {
             "name": "Słód Pilznenski Viking Malt",
             "amount": {
-              "value": 4.0,
+              "value": 4,
               "unit": "kilograms"
             }
           },
@@ -225,7 +252,7 @@
           {
             "name": "Zeus/Colombus",
             "amount": {
-              "value": 10.0,
+              "value": 10,
               "unit": "grams"
             },
             "add": "start",
@@ -257,5 +284,5 @@
       },
       "contributed_by": "Brewing helper"
     }
-]
+  ]
 }
