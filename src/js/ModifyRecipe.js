@@ -1,6 +1,6 @@
 import React, {Fragment, Component} from 'react';
 import HandleModifyRecipe from "./HandleModifyRecipe";
-import {Button, Icon} from 'react-materialize'
+import {Button, Icon, Table} from 'react-materialize'
 import {Link} from "react-router-dom";
 
 
@@ -56,12 +56,12 @@ class ModifyRecipe extends Component{
 
     }
     render(){
-        console.log(this.state.beer);
+        const idBeer = this.state.beer.id;
         return this.state.beer && (
             <div>
                 <h1>{this.state.beer.name}</h1>
                 <h2>{this.state.beer.description}</h2>
-                <table className="centered striped">
+                <Table className="centered bordered">
                     <thead>
                     <tr>
                         <th>Nazwa</th>
@@ -172,8 +172,8 @@ class ModifyRecipe extends Component{
                     <tr><td>Stworzone przez</td><td>{this.state.beer.contributed_by}</td></tr>
 
                     </tbody>
-                </table>
-                <Link  to={`/homebrewing`}>Zatwierdź!</Link>
+                </Table>
+                <Link  to={`/homebrewing/${idBeer}`}>Zatwierdź!</Link>
             </div>
 
 

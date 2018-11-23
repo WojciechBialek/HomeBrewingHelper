@@ -35,7 +35,7 @@ class App extends Component {
                       <Route exact path="/" component={StartPage} />
                       <Route path={"/searchbeer"} component={SearchBeer}/>
                       <Route path='/beers/:beerId' component={ModifyRecipe} />
-                      <Route path="/homebrewing" component={HomeBrewing}/>
+                      <Route path="/homebrewing/:beerId" component={HomeBrewing}/>
                       <Route component={NotFound} />
                   </Switch>
                 </MainTemplate>

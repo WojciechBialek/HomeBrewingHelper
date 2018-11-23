@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 // import {Button, Icon} from 'react-materialize';
 
 import {
@@ -43,9 +43,11 @@ class Beers extends React.Component {
                 <div>
                     {this.state.data.map(beer => {
                         return (
-                            <div key={beer.id}>
-                                <Link  to={`/beers/${beer.id}`}>{beer.name}</Link>
-                            </div>
+                            <Fragment key={beer.id}>
+                                <Link className="main-wrapper" to={`/beers/${beer.id}`}><button className={`badge ${beer.color}`}><div className="circle">
+
+                                </div><span className="ribbon">{beer.name}</span></button></Link>
+                            </Fragment>
                         );
                     })}
                 </div>
