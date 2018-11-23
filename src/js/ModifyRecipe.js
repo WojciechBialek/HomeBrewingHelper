@@ -1,6 +1,6 @@
 import React, {Fragment, Component} from 'react';
 import HandleModifyRecipe from "./HandleModifyRecipe";
-import {Button, Icon, Table} from 'react-materialize'
+import {Button, Table} from 'react-materialize'
 import {Link} from "react-router-dom";
 
 
@@ -59,9 +59,9 @@ class ModifyRecipe extends Component{
         const idBeer = this.state.beer.id;
         return this.state.beer && (
             <div>
-                <h1>{this.state.beer.name}</h1>
-                <h2>{this.state.beer.description}</h2>
-                <Table className="centered bordered">
+                <h1 className={"name"}>{this.state.beer.name}</h1>
+                <h2 className={"description"}>{this.state.beer.description}</h2>
+                <Table className="darkTable">
                     <thead>
                     <tr>
                         <th>Nazwa</th>
@@ -75,19 +75,19 @@ class ModifyRecipe extends Component{
                     </tr>
                     <tr>
                         <td>BLG końcowe</td>
-                        <td><HandleModifyRecipe value={this.state.beer.blg_end}/></td>
+                        <td><HandleModifyRecipe clickMethod={this.updateBeer} name={"blg_end"} value={this.state.beer.blg_end}/></td>
                     </tr>
                     <tr>
                         <td>Kolor w skali "ebc"</td>
-                        <td><HandleModifyRecipe value={this.state.beer.ebc}/></td>
+                        <td><HandleModifyRecipe clickMethod={this.updateBeer} name={"ebc"} value={this.state.beer.ebc}/></td>
                     </tr>
                     <tr>
                         <td>Szacowana wielkość warki</td>
-                        <td><HandleModifyRecipe value={this.state.beer.volume.value}/> <HandleModifyRecipe value={this.state.beer.volume.unit}/></td>
+                        <td><HandleModifyRecipe clickMethod={this.updateBeer} name={"volume.value"} value={this.state.beer.volume.value}/> <HandleModifyRecipe value={this.state.beer.volume.unit}/></td>
                     </tr>
                     <tr>
                         <td>Minimalna objętość garnka</td>
-                        <td><HandleModifyRecipe value={this.state.beer.boil_volume.value}/> <HandleModifyRecipe value={this.state.beer.boil_volume.unit}/></td>
+                        <td><HandleModifyRecipe clickMethod={this.updateBeer} name={"boil_volume.value"} value={this.state.beer.boil_volume.value}/> <HandleModifyRecipe value={this.state.beer.boil_volume.unit}/></td>
                     </tr>
                     {this.state.beer.method.mash_temp.map(mash => {
                         return (
@@ -98,7 +98,7 @@ class ModifyRecipe extends Component{
                                 </tr>
                                 <tr>
                                     <td>Temperatura</td>
-                                    <td><HandleModifyRecipe value={mash.value}/></td>
+                                    <td><HandleModifyRecipe clickMethod={this.updateBeer} name={"mash.value"} value={mash.value}/></td>
                                 </tr>
                                 <tr>
                                     <td>Czas utrzymywania</td>
@@ -173,7 +173,10 @@ class ModifyRecipe extends Component{
 
                     </tbody>
                 </Table>
-                <Link  to={`/homebrewing/${idBeer}`}>Zatwierdź!</Link>
+                <div className="acceptBeer">
+                <Link  to={`/homebrewing/${idBeer}`}><Button waves='light'>Zatwierdź</Button></Link>
+                <Link  to={"/searchbeer"}><Button waves='light'>Cofnij</Button></Link>
+                </div>
             </div>
 
 

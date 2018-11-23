@@ -10,9 +10,7 @@ import HomeBrewing from "./js/HomeBrewing";
 import {
     HashRouter,
     Route,
-    Link,
     Switch,
-    NavLink,
 } from 'react-router-dom';
 
 const MainTemplate=({children})=>(

@@ -162,9 +162,9 @@
       "image_url": "../images/redIpa.jpg",
       "abv": 6,
       "ibu": 47,
-      "blg_start": 14,
-      "blg_end": 3,
-      "ebc": 25,
+      "blg_start": "14",
+      "blg_end": "3",
+      "ebc": "25",
       "srm": 8.5,
       "color": "yellow",
       "volume": {
@@ -306,12 +306,14 @@
           "type": "US-05"
         }
       },
-      "contributed_by": "Brewing helper"
+      "contributed_by": "Brewing helper",
+      "volume.value": "201",
+      "boil_volume.value": "27",
+      "mash.value": "63.50"
     },
-
     {
       "id": 3,
-      "name": "Berliner Weisse ",
+      "name": "Weisse ",
       "tagline": "Berliner Weisse",
       "description": "Bardzo jasne, kwaskowate, orzeźwiające, niskoalkoholowe pszenne ale. ",
       "image_url": "../images/redIpa.jpg",
@@ -321,7 +323,7 @@
       "blg_end": 3,
       "ebc": 25,
       "srm": 8.5,
-      "color": "yellow",
+      "color": "silver",
       "volume": {
         "value": 20,
         "unit": "liters"
@@ -463,5 +465,777 @@
       },
       "contributed_by": "Brewing helper"
     },
+    {
+      "id": 4,
+      "name": "Saison ",
+      "tagline": "Berliner Weisse",
+      "description": "Bardzo jasne, kwaskowate, orzeźwiające, niskoalkoholowe pszenne ale. ",
+      "image_url": "../images/redIpa.jpg",
+      "abv": 6,
+      "ibu": 47,
+      "blg_start": 14,
+      "blg_end": 3,
+      "ebc": 25,
+      "srm": 8.5,
+      "color": "gold",
+      "volume": {
+        "value": 20,
+        "unit": "liters"
+      },
+      "boil_volume": {
+        "value": 27,
+        "unit": "liters"
+      },
+      "method": {
+        "mash_temp": [
+          {
+            "temp": "przerwa zakwaszająca",
+            "value": 63.5,
+            "unit": "celsius",
+            "duration": 30
+          },
+          {
+            "temp": "przerwa maltozowa",
+            "value": 72,
+            "unit": "celsius",
+            "duration": 30
+          },
+          {
+            "temp": "przerwa cukrująca",
+            "value": 77,
+            "unit": "celsius",
+            "duration": 5
+          }
+        ],
+        "fermentation": {
+          "value": 19,
+          "unit": "celsius"
+        },
+        "twist": null
+      },
+      "ingredients": {
+        "water": [
+          {
+            "name": "start",
+            "amount": 16,
+            "temp": 70
+          },
+          {
+            "name": "filtration",
+            "amount": "14",
+            "temp": "77.5"
+          }
+        ],
+        "malt": [
+          {
+            "name": "Słód Pilznenski Viking Malt",
+            "amount": {
+              "value": 4,
+              "unit": "kilograms"
+            }
+          },
+          {
+            "name": "Słód monachijski Viking Malt II",
+            "amount": {
+              "value": 0.8,
+              "unit": "kilograms"
+            }
+          },
+          {
+            "name": "Słód karmelowy jasny Litovel",
+            "amount": {
+              "value": 0.4,
+              "unit": "kilograms"
+            }
+          },
+          {
+            "name": "Słód karmelowy ciemny Ireks",
+            "amount": {
+              "value": 0.1,
+              "unit": "kilograms"
+            }
+          }
+        ],
+        "hops": [
+          {
+            "id": 1,
+            "name": "Zeus/Colombus",
+            "amount": {
+              "value": 10,
+              "unit": "grams"
+            },
+            "add": "gotowanie",
+            "attribute": "bitter",
+            "time": 10
+          },
+          {
+            "id": 2,
+            "name": "Simcoe",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "gotowanie",
+            "attribute": "bitter",
+            "time": 30,
+            "warning": "nie całość!"
+          },
+          {
+            "id": 3,
+            "name": "Citra",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "gotowanie",
+            "attribute": "bitter",
+            "warning": "nie całość!"
+          },
+          {
+            "id": 4,
+            "name": "Simcoe",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "chmielenie na zimno",
+            "attribute": "bitter"
+          },
+          {
+            "id": 5,
+            "name": "Citra",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "chmielenie na zimno",
+            "attribute": "bitter"
+          }
+        ],
+        "yeast": {
+          "form": "drożdże suche",
+          "type": "US-05"
+        }
+      },
+      "contributed_by": "Brewing helper"
+    },
+    {
+      "id": 5,
+      "name": "Lambic ",
+      "tagline": "Berliner Weisse",
+      "description": "Bardzo jasne, kwaskowate, orzeźwiające, niskoalkoholowe pszenne ale. ",
+      "image_url": "../images/redIpa.jpg",
+      "abv": 6,
+      "ibu": 47,
+      "blg_start": 14,
+      "blg_end": 3,
+      "ebc": 25,
+      "srm": 8.5,
+      "color": "pink",
+      "volume": {
+        "value": 20,
+        "unit": "liters"
+      },
+      "boil_volume": {
+        "value": 27,
+        "unit": "liters"
+      },
+      "method": {
+        "mash_temp": [
+          {
+            "temp": "przerwa zakwaszająca",
+            "value": 63.5,
+            "unit": "celsius",
+            "duration": 30
+          },
+          {
+            "temp": "przerwa maltozowa",
+            "value": 72,
+            "unit": "celsius",
+            "duration": 30
+          },
+          {
+            "temp": "przerwa cukrująca",
+            "value": 77,
+            "unit": "celsius",
+            "duration": 5
+          }
+        ],
+        "fermentation": {
+          "value": 19,
+          "unit": "celsius"
+        },
+        "twist": null
+      },
+      "ingredients": {
+        "water": [
+          {
+            "name": "start",
+            "amount": 16,
+            "temp": 70
+          },
+          {
+            "name": "filtration",
+            "amount": "14",
+            "temp": "77.5"
+          }
+        ],
+        "malt": [
+          {
+            "name": "Słód Pilznenski Viking Malt",
+            "amount": {
+              "value": 4,
+              "unit": "kilograms"
+            }
+          },
+          {
+            "name": "Słód monachijski Viking Malt II",
+            "amount": {
+              "value": 0.8,
+              "unit": "kilograms"
+            }
+          },
+          {
+            "name": "Słód karmelowy jasny Litovel",
+            "amount": {
+              "value": 0.4,
+              "unit": "kilograms"
+            }
+          },
+          {
+            "name": "Słód karmelowy ciemny Ireks",
+            "amount": {
+              "value": 0.1,
+              "unit": "kilograms"
+            }
+          }
+        ],
+        "hops": [
+          {
+            "id": 1,
+            "name": "Zeus/Colombus",
+            "amount": {
+              "value": 10,
+              "unit": "grams"
+            },
+            "add": "gotowanie",
+            "attribute": "bitter",
+            "time": 10
+          },
+          {
+            "id": 2,
+            "name": "Simcoe",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "gotowanie",
+            "attribute": "bitter",
+            "time": 30,
+            "warning": "nie całość!"
+          },
+          {
+            "id": 3,
+            "name": "Citra",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "gotowanie",
+            "attribute": "bitter",
+            "warning": "nie całość!"
+          },
+          {
+            "id": 4,
+            "name": "Simcoe",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "chmielenie na zimno",
+            "attribute": "bitter"
+          },
+          {
+            "id": 5,
+            "name": "Citra",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "chmielenie na zimno",
+            "attribute": "bitter"
+          }
+        ],
+        "yeast": {
+          "form": "drożdże suche",
+          "type": "US-05"
+        }
+      },
+      "contributed_by": "Brewing helper"
+    },
+    {
+      "id": 6,
+      "name": "Stout ",
+      "tagline": "Stout",
+      "description": "Bardzo jasne, kwaskowate, orzeźwiające, niskoalkoholowe pszenne ale. ",
+      "image_url": "../images/redIpa.jpg",
+      "abv": 6,
+      "ibu": 47,
+      "blg_start": 14,
+      "blg_end": 3,
+      "ebc": 25,
+      "srm": 8.5,
+      "color": "black",
+      "volume": {
+        "value": 20,
+        "unit": "liters"
+      },
+      "boil_volume": {
+        "value": 27,
+        "unit": "liters"
+      },
+      "method": {
+        "mash_temp": [
+          {
+            "temp": "przerwa zakwaszająca",
+            "value": 63.5,
+            "unit": "celsius",
+            "duration": 30
+          },
+          {
+            "temp": "przerwa maltozowa",
+            "value": 72,
+            "unit": "celsius",
+            "duration": 30
+          },
+          {
+            "temp": "przerwa cukrująca",
+            "value": 77,
+            "unit": "celsius",
+            "duration": 5
+          }
+        ],
+        "fermentation": {
+          "value": 19,
+          "unit": "celsius"
+        },
+        "twist": null
+      },
+      "ingredients": {
+        "water": [
+          {
+            "name": "start",
+            "amount": 16,
+            "temp": 70
+          },
+          {
+            "name": "filtration",
+            "amount": "14",
+            "temp": "77.5"
+          }
+        ],
+        "malt": [
+          {
+            "name": "Słód Pilznenski Viking Malt",
+            "amount": {
+              "value": 4,
+              "unit": "kilograms"
+            }
+          },
+          {
+            "name": "Słód monachijski Viking Malt II",
+            "amount": {
+              "value": 0.8,
+              "unit": "kilograms"
+            }
+          },
+          {
+            "name": "Słód karmelowy jasny Litovel",
+            "amount": {
+              "value": 0.4,
+              "unit": "kilograms"
+            }
+          },
+          {
+            "name": "Słód karmelowy ciemny Ireks",
+            "amount": {
+              "value": 0.1,
+              "unit": "kilograms"
+            }
+          }
+        ],
+        "hops": [
+          {
+            "id": 1,
+            "name": "Zeus/Colombus",
+            "amount": {
+              "value": 10,
+              "unit": "grams"
+            },
+            "add": "gotowanie",
+            "attribute": "bitter",
+            "time": 10
+          },
+          {
+            "id": 2,
+            "name": "Simcoe",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "gotowanie",
+            "attribute": "bitter",
+            "time": 30,
+            "warning": "nie całość!"
+          },
+          {
+            "id": 3,
+            "name": "Citra",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "gotowanie",
+            "attribute": "bitter",
+            "warning": "nie całość!"
+          },
+          {
+            "id": 4,
+            "name": "Simcoe",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "chmielenie na zimno",
+            "attribute": "bitter"
+          },
+          {
+            "id": 5,
+            "name": "Citra",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "chmielenie na zimno",
+            "attribute": "bitter"
+          }
+        ],
+        "yeast": {
+          "form": "drożdże suche",
+          "type": "US-05"
+        }
+      },
+      "contributed_by": "Brewing helper"
+    },
+    {
+      "id": 7,
+      "name": "Lager ",
+      "tagline": "Lager",
+      "description": "Bardzo jasne, kwaskowate, orzeźwiające, niskoalkoholowe pszenne ale. ",
+      "image_url": "../images/redIpa.jpg",
+      "abv": 6,
+      "ibu": 47,
+      "blg_start": 14,
+      "blg_end": 3,
+      "ebc": 25,
+      "srm": 8.5,
+      "color": "orange",
+      "volume": {
+        "value": 20,
+        "unit": "liters"
+      },
+      "boil_volume": {
+        "value": 27,
+        "unit": "liters"
+      },
+      "method": {
+        "mash_temp": [
+          {
+            "temp": "przerwa zakwaszająca",
+            "value": 63.5,
+            "unit": "celsius",
+            "duration": 30
+          },
+          {
+            "temp": "przerwa maltozowa",
+            "value": 72,
+            "unit": "celsius",
+            "duration": 30
+          },
+          {
+            "temp": "przerwa cukrująca",
+            "value": 77,
+            "unit": "celsius",
+            "duration": 5
+          }
+        ],
+        "fermentation": {
+          "value": 19,
+          "unit": "celsius"
+        },
+        "twist": null
+      },
+      "ingredients": {
+        "water": [
+          {
+            "name": "start",
+            "amount": 16,
+            "temp": 70
+          },
+          {
+            "name": "filtration",
+            "amount": "14",
+            "temp": "77.5"
+          }
+        ],
+        "malt": [
+          {
+            "name": "Słód Pilznenski Viking Malt",
+            "amount": {
+              "value": 4,
+              "unit": "kilograms"
+            }
+          },
+          {
+            "name": "Słód monachijski Viking Malt II",
+            "amount": {
+              "value": 0.8,
+              "unit": "kilograms"
+            }
+          },
+          {
+            "name": "Słód karmelowy jasny Litovel",
+            "amount": {
+              "value": 0.4,
+              "unit": "kilograms"
+            }
+          },
+          {
+            "name": "Słód karmelowy ciemny Ireks",
+            "amount": {
+              "value": 0.1,
+              "unit": "kilograms"
+            }
+          }
+        ],
+        "hops": [
+          {
+            "id": 1,
+            "name": "Zeus/Colombus",
+            "amount": {
+              "value": 10,
+              "unit": "grams"
+            },
+            "add": "gotowanie",
+            "attribute": "bitter",
+            "time": 10
+          },
+          {
+            "id": 2,
+            "name": "Simcoe",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "gotowanie",
+            "attribute": "bitter",
+            "time": 30,
+            "warning": "nie całość!"
+          },
+          {
+            "id": 3,
+            "name": "Citra",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "gotowanie",
+            "attribute": "bitter",
+            "warning": "nie całość!"
+          },
+          {
+            "id": 4,
+            "name": "Simcoe",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "chmielenie na zimno",
+            "attribute": "bitter"
+          },
+          {
+            "id": 5,
+            "name": "Citra",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "chmielenie na zimno",
+            "attribute": "bitter"
+          }
+        ],
+        "yeast": {
+          "form": "drożdże suche",
+          "type": "US-05"
+        }
+      },
+      "contributed_by": "Brewing helper"
+    },
+    {
+      "id": 8,
+      "name": "AIPA",
+      "tagline": "American IPA",
+      "description": "Bardzo jasne, kwaskowate, orzeźwiające, niskoalkoholowe pszenne ale. ",
+      "image_url": "../images/redIpa.jpg",
+      "abv": 6,
+      "ibu": 47,
+      "blg_start": "141",
+      "blg_end": 3,
+      "ebc": 25,
+      "srm": 8.5,
+      "color": "ipa",
+      "volume": {
+        "value": 20,
+        "unit": "liters"
+      },
+      "boil_volume": {
+        "value": 27,
+        "unit": "liters"
+      },
+      "method": {
+        "mash_temp": [
+          {
+            "temp": "przerwa zakwaszająca",
+            "value": 63.5,
+            "unit": "celsius",
+            "duration": 30
+          },
+          {
+            "temp": "przerwa maltozowa",
+            "value": 72,
+            "unit": "celsius",
+            "duration": 30
+          },
+          {
+            "temp": "przerwa cukrująca",
+            "value": 77,
+            "unit": "celsius",
+            "duration": 5
+          }
+        ],
+        "fermentation": {
+          "value": 19,
+          "unit": "celsius"
+        },
+        "twist": null
+      },
+      "ingredients": {
+        "water": [
+          {
+            "name": "start",
+            "amount": 16,
+            "temp": 70
+          },
+          {
+            "name": "filtration",
+            "amount": "14",
+            "temp": "77.5"
+          }
+        ],
+        "malt": [
+          {
+            "name": "Słód Pilznenski Viking Malt",
+            "amount": {
+              "value": 4,
+              "unit": "kilograms"
+            }
+          },
+          {
+            "name": "Słód monachijski Viking Malt II",
+            "amount": {
+              "value": 0.8,
+              "unit": "kilograms"
+            }
+          },
+          {
+            "name": "Słód karmelowy jasny Litovel",
+            "amount": {
+              "value": 0.4,
+              "unit": "kilograms"
+            }
+          },
+          {
+            "name": "Słód karmelowy ciemny Ireks",
+            "amount": {
+              "value": 0.1,
+              "unit": "kilograms"
+            }
+          }
+        ],
+        "hops": [
+          {
+            "id": 1,
+            "name": "Zeus/Colombus",
+            "amount": {
+              "value": 10,
+              "unit": "grams"
+            },
+            "add": "gotowanie",
+            "attribute": "bitter",
+            "time": 10
+          },
+          {
+            "id": 2,
+            "name": "Simcoe",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "gotowanie",
+            "attribute": "bitter",
+            "time": 30,
+            "warning": "nie całość!"
+          },
+          {
+            "id": 3,
+            "name": "Citra",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "gotowanie",
+            "attribute": "bitter",
+            "warning": "nie całość!"
+          },
+          {
+            "id": 4,
+            "name": "Simcoe",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "chmielenie na zimno",
+            "attribute": "bitter"
+          },
+          {
+            "id": 5,
+            "name": "Citra",
+            "amount": {
+              "value": 25,
+              "unit": "grams"
+            },
+            "add": "chmielenie na zimno",
+            "attribute": "bitter"
+          }
+        ],
+        "yeast": {
+          "form": "drożdże suche",
+          "type": "US-05"
+        }
+      },
+      "contributed_by": "Brewing helper",
+      "mash.value": "63.54",
+      "volume.value": "202"
+    }
   ]
 }

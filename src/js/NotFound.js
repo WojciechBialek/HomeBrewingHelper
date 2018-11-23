@@ -6,7 +6,7 @@ class NotFound extends React.Component{
         return(
             <div >
                 <h1>Przecholowałeś</h1>
-                <img src={image}/>
+                <img src={image} alt=""/>
             </div>
         )
     }

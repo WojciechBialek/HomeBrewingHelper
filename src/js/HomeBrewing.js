@@ -1,7 +1,8 @@
-import React, {Fragment} from 'react';
-import {Link} from "react-router-dom";
+import React from 'react';
+// import {Link} from "react-router-dom";
+import {Col, Card, Button} from 'react-materialize';
 
-class HomeBrewing extends React.Component{
+class HomeBrewing extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -24,23 +25,35 @@ class HomeBrewing extends React.Component{
             .catch(err => {
                 console.log(err);
             });
+    }
+    handleChangeTask=(e)=>{
+        e.preventDefault();
 
     }
-    render(){
-        if (!this.state.beer){
+    render() {
+        if (!this.state.beer) {
             return <div>Ładuję...</div>;
-        }else{
-            return (
-                <div>
-                    <ul>
-                        <li>Podgrzej 16l wody do temperatury 70C i wsyp do niej słód, wszystko starannie rozmieszaj tak aby nie pozostały w zacierze żadne większe grudy</li>
+        } else {
+            return (<div>
+                <Col m={6} s={12}>
+                    <Card className='blue-grey darken-1' textClassName='white-text' title='Przygotuj sprzęt!' actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
+                        Przed  przystąpieniem  do  warzenia  piwa,  należy  bardzo  dokładnie
+                        wyczyścić i  wysterylizować cały  sprzęt.  Brak  staranności  przy  utrzymaniu
+                        higieny, jest głównym powodem nie osiągnięcia zamierzonego celu.
+                    </Card>
+                </Col>
+                <Col m={6} s={12}>
+                    <Card className='blue-grey darken-1' textClassName='white-text' title='Zacieranie!' actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
+                        Podgrzej 16litrow wody do temp 70C i wsyp do niej słód
+                    </Card>
+                </Col>
 
-                    </ul>
-                </div>
-            );
+            </div>)
+
+
         }
+    }
+}
 
-}
-}
 
 export default HomeBrewing

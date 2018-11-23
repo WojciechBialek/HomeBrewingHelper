@@ -2,11 +2,7 @@ import React, {Fragment} from 'react';
 // import {Button, Icon} from 'react-materialize';
 
 import {
-    HashRouter,
-    Route,
     Link,
-    Switch,
-    NavLink,
 } from 'react-router-dom';
 
 class Beers extends React.Component {
@@ -37,10 +33,25 @@ class Beers extends React.Component {
 
     render() {
         if (!this.state.data){
-            return <div>Ładuję...</div>;
+            return <div><div id="glass">
+                <div id="beer"></div>
+            </div>
+                <div id="poignet"></div>
+                <div id="mousse_1"></div>
+                <div id="mousse_2"></div>
+                <div id="mousse_3"></div>
+                <div id="mousse_4"></div>
+                <div id="mousse_5"></div>
+                <div id="mousse_volante"></div>
+                <div id="mousse_interieur"></div>
+                <div id="mousse_interieur_2"></div>
+                <div id="mousse_interieur_3"></div>
+                <div id="mousse_interieur_4"></div>
+                <p id="beer_text">BEER</p></div>;
         }else{
             return (
-                <div>
+                <div className="chooseBeerDiv">
+
                     {this.state.data.map(beer => {
                         return (
                             <Fragment key={beer.id}>
