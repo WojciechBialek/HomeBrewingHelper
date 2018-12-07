@@ -7,6 +7,7 @@ class HomeBrewing extends React.Component {
         super(props);
         this.state = {
             beer: false,
+            display: "block"
         };
         this.beerURL = `http://localhost:4000/beers/${this.props.match.params.beerId}`;
     }
@@ -28,6 +29,10 @@ class HomeBrewing extends React.Component {
     }
     handleChangeTask=(e)=>{
         e.preventDefault();
+        this.setState({
+            display: "none"
+        })
+        
 
     }
     render() {
@@ -36,14 +41,14 @@ class HomeBrewing extends React.Component {
         } else {
             return (<div>
                 <Col m={6} s={12}>
-                    <Card className='blue-grey darken-1' textClassName='white-text' title='Przygotuj sprzęt!' actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
+                    <Card className='blue-grey darken-1' textClassName='white-text' title='Przygotuj sprzęt!' style={{display: this.state.display}} actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
                         Przed  przystąpieniem  do  warzenia  piwa,  należy  bardzo  dokładnie
                         wyczyścić i  wysterylizować cały  sprzęt.  Brak  staranności  przy  utrzymaniu
                         higieny, jest głównym powodem nie osiągnięcia zamierzonego celu.
                     </Card>
                 </Col>
                 <Col m={6} s={12}>
-                    <Card className='blue-grey darken-1' textClassName='white-text' title='Zacieranie!' actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
+                    <Card className='blue-grey darken-1' textClassName='white-text' title='Zacieranie!' style={{display: this.state.display}} actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
                         Podgrzej 16litrow wody do temp 70C i wsyp do niej słód
                     </Card>
                 </Col>

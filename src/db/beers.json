@@ -152,7 +152,8 @@
           "type": "US-05"
         }
       },
-      "contributed_by": "Brewing helper"
+      "contributed_by": "Brewing helper",
+      "mash.value": 63.5
     },
     {
       "id": 2,
