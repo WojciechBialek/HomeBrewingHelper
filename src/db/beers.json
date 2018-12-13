@@ -8,9 +8,9 @@
       "image_url": "../images/redIpa.jpg",
       "abv": 6,
       "ibu": 47,
-      "blg_start": 14,
-      "blg_end": 3,
-      "ebc": 25,
+      "blg_start": "14",
+      "blg_end": "3",
+      "ebc": "25",
       "srm": 8.5,
       "color": "red",
       "volume": {
@@ -153,7 +153,9 @@
         }
       },
       "contributed_by": "Brewing helper",
-      "mash.value": 63.5
+      "mash.value": "63.51",
+      "volume.value": "201",
+      "boil_volume.value": "271"
     },
     {
       "id": 2,

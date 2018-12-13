@@ -7,6 +7,7 @@ class HomeBrewing extends React.Component {
         super(props);
         this.state = {
             beer: false,
+            firstCard: "block",
             display: "block"
         };
         this.beerURL = `http://localhost:4000/beers/${this.props.match.params.beerId}`;
@@ -29,19 +30,21 @@ class HomeBrewing extends React.Component {
     }
     handleChangeTask=(e)=>{
         e.preventDefault();
-        this.setState({
-            display: "none"
-        })
-        
+        e.target.style.display="none";
+        e.currentTarget.style.display="none";
+        // this.setState({
+        //     display: "none"
+        // })
+
 
     }
     render() {
         if (!this.state.beer) {
             return <div>Ładuję...</div>;
         } else {
-            return (<div>
+            return (<div className="Card">
                 <Col m={6} s={12}>
-                    <Card className='blue-grey darken-1' textClassName='white-text' title='Przygotuj sprzęt!' style={{display: this.state.display}} actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
+                    <Card className='blue-grey darken-1' textClassName='white-text' title='Przygotuj sprzęt!' id="card1"  actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
                         Przed  przystąpieniem  do  warzenia  piwa,  należy  bardzo  dokładnie
                         wyczyścić i  wysterylizować cały  sprzęt.  Brak  staranności  przy  utrzymaniu
                         higieny, jest głównym powodem nie osiągnięcia zamierzonego celu.
@@ -49,7 +52,27 @@ class HomeBrewing extends React.Component {
                 </Col>
                 <Col m={6} s={12}>
                     <Card className='blue-grey darken-1' textClassName='white-text' title='Zacieranie!' style={{display: this.state.display}} actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
-                        Podgrzej 16litrow wody do temp 70C i wsyp do niej słód
+                        Podgrzej 16 litrów wody do temp 70C i wsyp do niej słód, wszystko starannie rozmieszaj tak aby nie pozostały w zacierze żadne większe grudy
+                    </Card>
+                </Col>
+                <Col m={6} s={12}>
+                    <Card className='blue-grey darken-1' textClassName='white-text' title='Zacieranie!' style={{display: this.state.display}} actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
+                        Temperatura powinna ustalić się na około 63-64 C, utrzymuj ją przez 30min
+                    </Card>
+                </Col>
+                <Col m={6} s={12}>
+                    <Card className='blue-grey darken-1' textClassName='white-text' title='Zacieranie!' style={{display: this.state.display}} actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
+                        Następnie podgrzej zacier do 72C i przetrzymuj przez kolejne 30min
+                    </Card>
+                </Col>
+                <Col m={6} s={12}>
+                    <Card className='blue-grey darken-1' textClassName='white-text' title='Zacieranie!' style={{display: this.state.display}} actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
+                        Następnie podgrzej zacier do 76-78C i przetrzymuj przez 5-10min
+                    </Card>
+                </Col>
+                <Col m={6} s={12}>
+                    <Card className='blue-grey darken-1' textClassName='white-text' title='Zacieranie!' style={{display: this.state.display}} actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
+                        Przenieś zacier do filtracji. Wysładzaj do uzyskania 23-24 litrów brzeczki. Do wysładzania użyj około 14litrów wody w temp 75-80 C, wodę dolewaj partiami do kilka litrów a nie całość na raz
                     </Card>
                 </Col>
 
