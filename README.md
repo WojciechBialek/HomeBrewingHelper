@@ -1,3 +1,14 @@
+## Home Brewing Helper
+
+the app helps beginners and experienced home brewers with the brewing process. The website is a final project for the JavaScript: React course in Coders Lab Programming School.
+ Now it is my pet project that is constantly updating
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
