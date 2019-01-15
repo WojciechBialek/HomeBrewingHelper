@@ -30,11 +30,8 @@ class HomeBrewing extends React.Component {
     }
     handleChangeTask=(e)=>{
         e.preventDefault();
-        e.target.style.display="none";
-        e.currentTarget.style.display="none";
-        // this.setState({
-        //     display: "none"
-        // })
+        e.target.parentNode.parentNode.style.display="none";
+        e.target.parentNode.parentNode.parentNode.nextSibling.style.display="block"
 
 
     }
@@ -50,28 +47,28 @@ class HomeBrewing extends React.Component {
                         higieny, jest głównym powodem nie osiągnięcia zamierzonego celu.
                     </Card>
                 </Col>
-                <Col m={6} s={12}>
-                    <Card className='blue-grey darken-1' textClassName='white-text' title='Zacieranie!' style={{display: this.state.display}} actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
+                <Col m={6} s={12} style={{display:'none'}}>
+                    <Card className='blue-grey darken-1' textClassName='white-text' title='Zacieranie!'   actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
                         Podgrzej 16 litrów wody do temp 70C i wsyp do niej słód, wszystko starannie rozmieszaj tak aby nie pozostały w zacierze żadne większe grudy
                     </Card>
                 </Col>
-                <Col m={6} s={12}>
-                    <Card className='blue-grey darken-1' textClassName='white-text' title='Zacieranie!' style={{display: this.state.display}} actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
+                <Col m={6} s={12} style={{display:'none'}}>
+                    <Card className='blue-grey darken-1' textClassName='white-text' title='Zacieranie!'  actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
                         Temperatura powinna ustalić się na około 63-64 C, utrzymuj ją przez 30min
                     </Card>
                 </Col>
-                <Col m={6} s={12}>
-                    <Card className='blue-grey darken-1' textClassName='white-text' title='Zacieranie!' style={{display: this.state.display}} actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
+                <Col m={6} s={12} style={{display:'none'}}>
+                    <Card className='blue-grey darken-1' textClassName='white-text' title='Zacieranie!'  actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
                         Następnie podgrzej zacier do 72C i przetrzymuj przez kolejne 30min
                     </Card>
                 </Col>
-                <Col m={6} s={12}>
-                    <Card className='blue-grey darken-1' textClassName='white-text' title='Zacieranie!' style={{display: this.state.display}} actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
+                <Col m={6} s={12} style={{display:'none'}}>
+                    <Card className='blue-grey darken-1' textClassName='white-text' title='Zacieranie!'  actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
                         Następnie podgrzej zacier do 76-78C i przetrzymuj przez 5-10min
                     </Card>
                 </Col>
-                <Col m={6} s={12}>
-                    <Card className='blue-grey darken-1' textClassName='white-text' title='Zacieranie!' style={{display: this.state.display}} actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
+                <Col m={6} s={12} style={{display:'none'}}>
+                    <Card className='blue-grey darken-1' textClassName='white-text' title='Zacieranie!'  actions={[<Button onClick={this.handleChangeTask}>Zrobione</Button>]}>
                         Przenieś zacier do filtracji. Wysładzaj do uzyskania 23-24 litrów brzeczki. Do wysładzania użyj około 14litrów wody w temp 75-80 C, wodę dolewaj partiami do kilka litrów a nie całość na raz
                     </Card>
                 </Col>
