@@ -3,25 +3,24 @@
 the app helps beginners and experienced home brewers with the brewing process. The website is a final project for the JavaScript: React course in Coders Lab Programming School.
  Now it is my pet project that is constantly updating
 
-
-
-
-
-
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+to run project:
 
 In the project directory, you can run:
-
 ### `npm start`
+
+then in the HomeBrewingHelper/src/db directory run:
+
+### `json-server -p 4000 --watch beers.json`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Other Available Scripts
 
 ### `npm test`
 
